@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Todo from "./component/Todo";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Todo />
+      {/* <Profile name="kumar" age={23} status="printer" />
+      <Profile name="kumar" age={24} status="developer" />
+      <Profile age={25} status="coder" />
+      <Profile age={25} status="coder" ><span style={{color:'red'}}>hello hi</span></Profile> */}
     </div>
   );
 }
