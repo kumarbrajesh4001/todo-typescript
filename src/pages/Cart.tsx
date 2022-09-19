@@ -19,7 +19,7 @@ const Cart = () => {
         <img src={product.image} alt="" />
         <p>{product.title}</p>
 
-        <button onClick={()=>handleRemove(product.id)}>Remove Item</button>
+        <button onClick={()=>handleRemove(product.id)}>Remove</button>
       </div>
       
       
