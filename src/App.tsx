@@ -1,15 +1,25 @@
 import React from "react";
-import Todo from "./component/Todo";
+import { Provider } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Todo from "./component/Todo";
 import "./App.css";
+import Navbar from "./component/Navbar";
+import Cart from "./pages/Cart";
+import Home from "./pages/Home";
+import store from "./store";
 
 function App() {
   return (
     <div className="App">
-      <Todo />
-      {/* <Profile name="kumar" age={23} status="printer" />
-      <Profile name="kumar" age={24} status="developer" />
-      <Profile age={25} status="coder" />
-      <Profile age={25} status="coder" ><span style={{color:'red'}}>hello hi</span></Profile> */}
+      <Provider store={store}>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </div>
   );
 }
